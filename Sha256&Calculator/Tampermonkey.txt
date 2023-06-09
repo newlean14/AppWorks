@@ -9,6 +9,10 @@
 // @grant        none
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
+
+var element = $("header h1");
+element.text("SHA256雜湊函式計算 & 計算機");
+
 (function() {
     'use strict';
     //////////////////////////////
