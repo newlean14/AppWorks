@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- boxicons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- css -->
+	<link rel="stylesheet" href="style-帳號資訊.css">
+	<!-- icon -->
+	<link rel="icon" href="../img/Froggy.svg">
+	<title>帳號資訊 - 二手衣物</title>
+</head>
+
+<body>
+
+	<!-- SIDEBAR Start-->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<img src="../img/Froggy.png">
+			<span class="text">Froggy Clothes</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#" id="DASHBOARD">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">帳號資訊</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE01">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">商品資訊</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE02">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">我的商品</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE03">
+					<i class='bx bxs-message-dots'></i>
+					<span class="text">用戶資訊</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE04">
+					<i class='bx bxs-group'></i>
+					<span class="text">後台數據</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE05">
+					<i class='bx bxs-group'></i>
+					<span class="text">匯款專區</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">設定</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout" id="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">登出</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR End-->
+
+	<!-- CONTENT Start-->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-arrow-from-right'></i>
+			<div class="blank"></div>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="../img/Froggy.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>帳號資訊</h1>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download'></i>
+					<span class="text">下載 XLS</span>
+				</a>
+			</div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<div class="left">
+							<div class="left-left">
+								<h3>Alex Chen</h3>
+								<h3>(帳號名稱)</h3>
+							</div>
+							<div class="left-right">
+								<h3>賣家代號:</h3>
+								<h3>2305003</h3>
+							</div>
+						</div>
+						<div class="right">
+							<button>下載合約</button>
+							<button>編輯資料</button>
+						</div>
+						<!-- <i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i> -->
+					</div>
+					<div class="content-up">
+						<div class="profilePic">
+							<img src="../img/Froggy.png">
+						</div>
+						<div class="table-01">
+							<table>
+								<tbody>
+									<tr>
+										<td>總件數</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>已申請</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>定價中</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>已送達</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+									</tr>
+									<tr>
+										<td>不寄賣</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>退回</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>捐贈</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>已售出</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+									</tr>
+									<tr>
+										<td>已匯款</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>未匯款</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>應收金額</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+										<td>已收金額</td>
+										<td class="td-up-colon">:</td>
+										<td>----------</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="content-down">
+						<div class="table-02">
+							<table>
+								<tbody>
+									<tr>
+										<td>會員姓名:</td>
+										<td>性別:</td>
+										<td>instagram帳號:</td>
+									</tr>
+									<tr class="member-data">
+										<td>Alex Chen</td>
+										<td>男</td>
+										<td>chinlean14</td>
+									</tr>
+									<tr>
+										<td>電子信件:</td>
+										<td>電話:</td>
+										<td>聯繫地址:</td>
+									</tr>
+									<tr class="member-data">
+										<td>newlean14@gmail.com</td>
+										<td>0912345678</td>
+										<td>台北市士林區</td>
+									</tr>
+									<tr>
+										<td>收款銀行:</td>
+										<td>戶名:</td>
+										<td>銀行帳號:</td>
+									</tr>
+									<tr class="member-data">
+										<td>國泰</td>
+										<td>Alex Chen</td>
+										<td>XXXXXXXXXXXXX</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT End-->
+
+	<!-- js -->
+	<script src="script-帳號資訊.js"></script>
+</body>
+
+</html>

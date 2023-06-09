@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- boxicons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- css -->
+	<link rel="stylesheet" href="style-我的商品.css">
+	<!-- icon -->
+	<link rel="icon" href="../img/Froggy.svg">
+	<title>我的商品 - 二手衣物</title>
+</head>
+
+<body>
+
+	<!-- SIDEBAR Start-->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<img src="../img/Froggy.png">
+			<span class="text">Froggy Clothes</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="#" id="DASHBOARD">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">帳號資訊</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE01">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">商品資訊</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="#" id="PAGE02">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">我的商品</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE03">
+					<i class='bx bxs-message-dots'></i>
+					<span class="text">用戶資訊</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE04">
+					<i class='bx bxs-group'></i>
+					<span class="text">後台數據</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" id="PAGE05">
+					<i class='bx bxs-group'></i>
+					<span class="text">匯款專區</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">設定</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout" id="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">登出</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR End-->
+
+	<!-- CONTENT Start-->
+	<section id="content">
+		<!-- NAVBAR Start-->
+		<nav>
+			<i class='bx bx-arrow-from-right'></i>
+			<div class="form"></div>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="../img/Froggy.png">
+			</a>
+		</nav>
+		<!-- NAVBAR End-->
+
+		<!-- MAIN Start-->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>我的商品</h1>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download'></i>
+					<span class="text">下載 XLS</span>
+				</a>
+			</div>
+			<div class="table-data">
+				<div class="data-main">
+					<div class="data-cont">
+						<div class="navBar">
+							<h1 class="bavBar-items">GF_AF01</h1>
+							<button class="bavBar-items cursor Btn01">申請中</button>
+							<button class="bavBar-items cursor Btn02">編輯商品</button>
+							<img class="bavBar-items" src="../img/條碼.png" id="barcode">
+							<button class="bavBar-items cursor Btn03">定價</button>
+							<button class="bavBar-items cursor Btn04">不寄賣</button>
+							<button class="bavBar-items cursor Btn05">賣家議價</button>
+							<button class="bavBar-items cursor Btn06">刪除商品</button>
+						</div>
+						<div class="products-info">
+							<div class="products-info-pic">
+								<div class="products-info-pic-left">
+									<img class="vertical-three" src="../img/NIKE-fixed.png">
+									<img class="vertical-three" src="../img/NIKE-fixed.png">
+									<img class="vertical-three" src="../img/NIKE-fixed.png">
+								</div>
+								<div class="products-info-pic-right">
+									<img class="center-one" src="../img/NIKE-fixed.png">
+								</div>
+							</div>
+							<div class="products-info-data">
+								<table>
+									<thead>
+										<div class="thead">
+											<div style="border-right: 2px solid black;" >商品資訊</div>
+											<div>分潤:40%</div>
+										</div>
+									</thead>
+									<tbody>
+										<tr class="bold">
+											<td>價格</td>
+											<td>種類</td>
+											<td>顏色</td>
+										</tr>
+										<tr class="blue">
+											<td>NT 2000</td>
+											<td>球鞋</td>
+											<td>白色</td>
+										</tr>
+										<tr class="bold">
+											<td>原價</td>
+											<td>尺寸</td>
+											<td>新舊程度</td>
+										</tr>
+										<tr class="blue">
+											<td>NT 4200</td>
+											<td>US 10.5</td>
+											<td>85%</td>
+										</tr>
+										<tr class="bold">
+											<td>售價範圍</td>
+											<td>品牌</td>
+											<td>Notes</td>
+										</tr>
+										<tr class="blue">
+											<td>200~2000元</td>
+											<td>Nike</td>
+											<td><button style="width: 80px; height: 20px;"></button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="sellers-info">
+							<div class="info-left">
+								<table>
+									<thead>
+										<tr>
+											<td class="bold margin">賣家訊息</td>
+											<td class="bold"><button>DETAILS</button></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="bold margin">名字</td>
+											<td class="bold">代號</td>
+										</tr>
+										<tr>
+											<td class="blue margin">Alex</td>
+											<td class="blue">202305003</td>
+										</tr>
+										<tr>
+											<td class="bold margin">電話</td>
+											<td class="bold">電子信箱</td>
+										</tr>
+										<tr>
+											<td class="blue margin">0912-345-678</td>
+											<td class="blue">newlean14@gmail.com</td>
+										</tr>
+										<tr>
+											<td class="bold margin">性別</td>
+											<td class="bold">IG帳號</td>
+										</tr>
+										<tr>
+											<td class="blue margin">男</td>
+											<td class="blue">chinlean14</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="info-right">
+								<div class="first">
+									<table>
+										<tbody>
+											<tr>
+												<td>建檔時間</td>
+												<td class="color">:</td>
+												<td>2023/05/03</td>
+											</tr>
+											<tr>
+												<td>確認寄賣</td>
+												<td class="color">:</td>
+												<td>2023/05/06</td>
+											</tr>
+											<tr>
+												<td>售出時間</td>
+												<td class="color">:</td>
+												<td>N/A</td>
+											</tr>
+											<tr>
+												<td>匯款時間</td>
+												<td class="color">:</td>
+												<td>N/A</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="second">
+									<table>
+										<tbody>
+											<tr>
+												<td>退貨</td>
+												<td class="color">:</td>
+												<td>------</td>
+											</tr>
+											<tr>
+												<td>賣家可取<br>
+													商品日期</td>
+												<td class="color">:</td>
+												<td>2023/11/06</td>
+											</tr>
+											<tr>
+												<td>最後一次<br>
+													更新時間</td>
+												<td class="color">:</td>
+												<td>2023/05/06<br>
+													下午2:35:16</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-others">
+						<h1>此賣家其他商品</h1>
+						<div>
+							<img class="others-items" src="../img/NIKE.bmp">
+							<img class="others-items" src="../img/NIKE.bmp">
+							<img class="others-items" src="../img/NIKE.bmp">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN End-->
+	</section>
+	<!-- CONTENT End-->
+
+	<!-- js -->
+	<script src="script-我的商品.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHA256 & Calculator</title>
+  <link rel="icon" href="img/Froggy.svg">
+  <!--Connect CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>SHA256雜湊函式計算</h1>
+  </header>
+
+  <main>
+    <!--Connect JS -->
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/js-sha256/build/sha256.min.js"></script>
+    <script>method = sha256;</script>
+    <!--SHA256 -->
+    <div id="sha256-container">
+      <h1>SHA256</h1>
+      <div class="input">
+        <textarea id="input" placeholder="Input"></textarea>
+      </div>
+      <div class="submit">
+        <input class="btn" id="execute" type="button" value="Hash">
+      </div>
+      <div class="output">
+        <textarea id="output" placeholder="Output"></textarea>
+      </div>
+    </div>
+    <!--Calculator -->
+    <!-- <div id="calculator-container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" id="display">
+          </div>
+          <div>
+            <input type="button" value="AC" id="clearBtn" class="special">
+            <input type="button" value="DE" id="deleteBtn" class="special">
+            <input type="button" value="." id="dotBtn" class="special">
+            <input type="button" value="/" id="divideBtn" class="operator">
+          </div>
+          <div>
+            <input type="button" value="7" id="sevenBtn" class="number">
+            <input type="button" value="8" id="eightBtn" class="number">
+            <input type="button" value="9" id="nightBtn" class="number">
+            <input type="button" value="*" id="multiplyBtn" class="operator">
+          </div>
+          <div>
+            <input type="button" value="4" id="fourBtn" class="number">
+            <input type="button" value="5" id="fiveBtn" class="number">
+            <input type="button" value="6" id="sixBtn" class="number">
+            <input type="button" value="-" id="minusBtn" class="operator">
+          </div>
+          <div>
+            <input type="button" value="1" id="oneBtn" class="number">
+            <input type="button" value="2" id="twoBtn" class="number">
+            <input type="button" value="3" id="threeBtn" class="number">
+            <input type="button" value="+" id="plusBtn" class="operator">
+          </div>
+          <div>
+            <input type="button" value="π" id="piBtn" class="symbol-pi">
+            <input type="button" value="0" id="zeroBtn" class="number">
+            <input type="button" value="=" id="equalBtn" class="equal">
+          </div>
+        </form>
+      </div>
+
+    </div> -->
+  </main>
+
+<!-----------------CALCULATOR JS----------------->
+
+  <!-- <script>
+    var display = document.getElementById('display');
+    var clearBtn = document.getElementById('clearBtn');
+    var deleteBtn = document.getElementById('deleteBtn');
+    var dotBtn = document.getElementById('dotBtn');
+    var divideBtn = document.getElementById('divideBtn');
+    var sevenBtn = document.getElementById('sevenBtn');
+    var eightBtn = document.getElementById('eightBtn');
+    var nightBtn = document.getElementById('nightBtn');
+    var multiplyBtn = document.getElementById('multiplyBtn');
+    var fourBtn = document.getElementById('fourBtn');
+    var fiveBtn = document.getElementById('fiveBtn');
+    var sixBtn = document.getElementById('sixBtn');
+    var minusBtn = document.getElementById('minusBtn');
+    var oneBtn = document.getElementById('oneBtn');
+    var twoBtn = document.getElementById('twoBtn');
+    var threeBtn = document.getElementById('threeBtn');
+    var plusBtn = document.getElementById('plusBtn');
+    var piBtn = document.getElementById('piBtn');
+    var zeroBtn = document.getElementById('zeroBtn');
+    var equalBtn = document.getElementById('equalBtn');
+    clearBtn.addEventListener('click', function () {
+      display.value = '';
+    });
+    deleteBtn.addEventListener('click', function () {
+      display.value = display.value.toString().slice(0, -1);
+    });
+    dotBtn.addEventListener('click', function () {
+      display.value += '.';
+    });
+    divideBtn.addEventListener('click', function () {
+      display.value += '/';
+    });
+    sevenBtn.addEventListener('click', function () {
+      display.value += '7';
+    });
+    eightBtn.addEventListener('click', function () {
+      display.value += '8';
+    });
+    nightBtn.addEventListener('click', function () {
+      display.value += '9';
+    });
+    multiplyBtn.addEventListener('click', function () {
+      display.value += '*';
+    });
+    fourBtn.addEventListener('click', function () {
+      display.value += '4';
+    });
+    fiveBtn.addEventListener('click', function () {
+      display.value += '5';
+    });
+    sixBtn.addEventListener('click', function () {
+      display.value += '6';
+    });
+    minusBtn.addEventListener('click', function () {
+      display.value += '-';
+    });
+    oneBtn.addEventListener('click', function () {
+      display.value += '1';
+    });
+    twoBtn.addEventListener('click', function () {
+      display.value += '2';
+    });
+    threeBtn.addEventListener('click', function () {
+      display.value += '3';
+    });
+    plusBtn.addEventListener('click', function () {
+      display.value += '+';
+    });
+    piBtn.addEventListener('click', function () {
+      display.value += '3.1415926';
+    });
+    zeroBtn.addEventListener('click', function () {
+      display.value += '0';
+    });
+    document.getElementById('equalBtn').addEventListener('click', function () {
+      display.value = eval(display.value);
+    });
+  </script> -->
+
+</body>
+
+</html>

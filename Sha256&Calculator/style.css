@@ -1,0 +1,184 @@
+html {
+  background-color: #4084dd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "SF Pro TC", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+header {
+  background-color: #2d2d2d;
+  text-align: center;
+  color: rgb(163, 157, 157);
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* header span {
+  color: yellow;
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4084dd;
+}
+/* ----------SHA256---------- */
+#sha256-container {
+  width: 50%;
+  text-align: center;
+}
+
+#sha256-container h1 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.submit {
+  height: 60px;
+  line-height: 50px;
+  text-align: center;
+}
+
+textarea {
+  font-size: 12pt;
+  width: 570px;
+  height: 200px;
+  border: 3px solid #302828;
+  background-color: #f1f79f;
+}
+
+::placeholder {
+  text-align: center;
+  line-height: 200px;
+  font-size: 16pt;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fae46b;
+  border-color: #523c15;
+}
+
+
+.btn:hover {
+  color: #462b08;
+  background-color: #f5971d;
+  border-color: #462b08;
+  transition: 0.15s;
+}
+
+.btn:active {
+  border: 2px solid rgb(2, 77, 8);
+  background-color: #05ad05;
+  color: rgb(255, 255, 0);
+  transition: 0.2s;
+}
+
+
+/* ----------CALCULATOR---------- */
+
+#calculator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding-top: 10px;
+}
+
+.calculator {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.calculator form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  border: 2px solid white;
+}
+
+/* Display */
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+}
+
+/* Botton */
+form input.equal {
+  width: 145px;
+  color: #eb4513;
+}
+
+form input.equal:hover {
+  border-color: rgb(234, 238, 25);
+  background-color: #f35c2d;
+  color: #0f0f0f;
+}
+
+form input.special {
+  color: #4084dd;
+}
+
+form input.special:hover {
+  border-color: rgb(234, 238, 25);
+  background-color: #4084dd;
+  color: #ebb82d;
+}
+
+form input.operator {
+  color: #eb4513;
+}
+
+form input.operator:hover {
+  border-color: rgb(234, 238, 25);
+  background-color: #f35c2d;
+  color: #0f0f0f;
+}
+
+form input.symbol-pi {
+  color: #05ad05;
+}
+
+form input.symbol-pi:hover {
+  border-color: rgb(235, 67, 25);
+  background-color: #35f135;
+  color: #1f08eb;
+}
+
+form input.number:hover {
+  border-color: rgb(238, 25, 210);
+  background-color: #36b4d3;
+  color: rgb(250, 88, 88);
+}

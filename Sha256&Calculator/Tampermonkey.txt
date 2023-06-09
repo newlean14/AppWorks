@@ -1,0 +1,262 @@
+// ==UserScript==
+// @name         Calculator
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Side Project for AppWorks
+// @author       Alex Chen
+// @match        https://newlean14.github.io/AppWorks/Sha256&Calculator/index.html
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+/* globals jQuery, $, waitForKeyElements */
+(function() {
+    'use strict';
+    //////////////////////////////
+    /////////////HTML/////////////
+    //////////////////////////////
+    $('main').append('<div id="calculator-container"><div class="calculator"><form><div class="display"><input type="text" id="display"></div></div></form></div></div>');
+    $('main #calculator-container .calculator form').append('<div class="line01"></div>');
+    $('main #calculator-container .calculator form .line01').append('<input type="button" value="AC" id="clearBtn" class="special">');
+    $('main #calculator-container .calculator form .line01').append('<input type="button" value="DE" id="deleteBtn" class="special">');
+    $('main #calculator-container .calculator form .line01').append('<input type="button" value="." id="dotBtn" class="special">');
+    $('main #calculator-container .calculator form .line01').append('<input type="button" value="/" id="divideBtn" class="operator">');
+    $('main #calculator-container .calculator form').append('<div class="line02"></div>');
+    $('main #calculator-container .calculator form .line02').append('<input type="button" value="7" id="sevenBtn" class="number">');
+    $('main #calculator-container .calculator form .line02').append('<input type="button" value="8" id="eightBtn" class="number">');
+    $('main #calculator-container .calculator form .line02').append('<input type="button" value="9" id="nightBtn" class="number">');
+    $('main #calculator-container .calculator form .line02').append('<input type="button" value="*" id="multiplyBtn" class="operator">');
+    $('main #calculator-container .calculator form').append('<div class="line03"></div>');
+    $('main #calculator-container .calculator form .line03').append('<input type="button" value="4" id="fourBtn" class="number">');
+    $('main #calculator-container .calculator form .line03').append('<input type="button" value="5" id="fiveBtn" class="number">');
+    $('main #calculator-container .calculator form .line03').append('<input type="button" value="6" id="sixBtn" class="number">');
+    $('main #calculator-container .calculator form .line03').append('<input type="button" value="-" id="minusBtn" class="operator">');
+    $('main #calculator-container .calculator form').append('<div class="line04"></div>');
+    $('main #calculator-container .calculator form .line04').append('<input type="button" value="1" id="oneBtn" class="number">');
+    $('main #calculator-container .calculator form .line04').append('<input type="button" value="2" id="twoBtn" class="number">');
+    $('main #calculator-container .calculator form .line04').append('<input type="button" value="3" id="threeBtn" class="number">');
+    $('main #calculator-container .calculator form .line04').append('<input type="button" value="+" id="plusBtn" class="operator">');
+    $('main #calculator-container .calculator form').append('<div class="line05"></div>');
+    $('main #calculator-container .calculator form .line05').append('<input type="button" value="π" id="piBtn" class="symbol-pi">');
+    $('main #calculator-container .calculator form .line05').append('<input type="button" value="0" id="zeroBtn" class="number">');
+    $('main #calculator-container .calculator form .line05').append('<input type="button" value="=" id="equalBtn" class="equal">');
+    //////////////////////////////
+    /////////////HTML/////////////
+    //////////////////////////////
+
+    //////////////////////////////
+    /////////////CSS//////////////
+    //////////////////////////////
+    $('#calculator-container').css({
+        'display': 'flex',
+        'align-items': 'center',
+        'justify-content': 'center',
+        'width': '50%',
+        'padding-top': '10px'
+    });
+
+    $('.calculator').css({
+        'background-color': '#333',
+        'padding': '20px',
+        'border-radius': '10px'
+    });
+
+    $('.calculator form input').css({
+        'border': '0',
+        'outline': '0',
+        'width': '60px',
+        'height': '60px',
+        'border-radius': '10px',
+        'background': 'transparent',
+        'font-size': '20px',
+        'color': '#fff',
+        'cursor': 'pointer',
+        'margin': '10px',
+        'border': '2px solid white'
+    });
+
+    $('form .display').css({
+        'display': 'flex',
+        'justify-content': 'flex-end',
+        'margin': '20px 0'
+    });
+
+    $('form .display input').css({
+        'text-align': 'right',
+        'flex': '1',
+        'font-size': '45px',
+        'box-shadow': 'none'
+    });
+
+    $('form input.equal').css({
+        'width': '145px',
+        'color': '#eb4513'
+    });
+
+    $('form input.equal').hover(
+        function() {
+            $(this).css({
+                'border-color': 'rgb(234, 238, 25)',
+                'background-color': '#f35c2d',
+                'color': '#0f0f0f'});},
+        function() {
+            $(this).css({
+                'border-color': 'white',
+                'background-color': '#333',
+                'color': '#eb4513'});}
+    );
+
+
+
+    $('form input.special').css({
+        'color': '#4084dd'
+    });
+
+    $('form input.special').hover(
+        function() {
+            $(this).css({
+                'border-color': 'rgb(234, 238, 25)',
+                'background-color': '#4084dd',
+                'color': '#ebb82d'});},
+        function() {
+            $(this).css({
+                'border-color': 'white',
+                'background-color': '#333',
+                'color': '#4084dd'});}
+    );
+
+    $('form input.operator').css({
+        'color': '#eb4513'
+    });
+
+    $('form input.operator').hover(
+        function() {
+            $(this).css({
+                'border-color': 'rgb(234, 238, 25)',
+                'background-color': '#f35c2d',
+                'color': '#0f0f0f'});},
+        function() {
+            $(this).css({
+                'border-color': 'white',
+                'background-color': '#333',
+                'color': '#eb4513'});}
+    );
+
+    $('form input.symbol-pi').css({
+        'color': '#05ad05'
+    });
+
+    $('form input.symbol-pi').hover(
+        function() {
+            $(this).css({
+                'border-color': 'rgb(235, 67, 25)',
+                'background-color': '#35f135',
+                'color': '#1f08eb'});},
+        function() {
+            $(this).css({
+                'border-color': 'white',
+                'background-color': '#333',
+                'color': '#05ad05'});}
+    );
+
+    $('form input.number').hover(
+        function() {
+            $(this).css({
+                'border-color': 'rgb(238, 25, 210)',
+                'background-color': '#36b4d3',
+                'color': 'rgb(250, 88, 88)'});},
+        function() {
+            $(this).css({
+                'border-color': 'white',
+                'background-color': '#333',
+                'color': '#4084dd'});}
+    );
+    //////////////////////////////
+    /////////////CSS//////////////
+    //////////////////////////////
+
+    //////////////////////////////
+    /////////////JS///////////////
+    //////////////////////////////
+    var display = document.getElementById('display');
+    var clearBtn = document.getElementById('clearBtn');
+    var deleteBtn = document.getElementById('deleteBtn');
+    var dotBtn = document.getElementById('dotBtn');
+    var divideBtn = document.getElementById('divideBtn');
+    var sevenBtn = document.getElementById('sevenBtn');
+    var eightBtn = document.getElementById('eightBtn');
+    var nightBtn = document.getElementById('nightBtn');
+    var multiplyBtn = document.getElementById('multiplyBtn');
+    var fourBtn = document.getElementById('fourBtn');
+    var fiveBtn = document.getElementById('fiveBtn');
+    var sixBtn = document.getElementById('sixBtn');
+    var minusBtn = document.getElementById('minusBtn');
+    var oneBtn = document.getElementById('oneBtn');
+    var twoBtn = document.getElementById('twoBtn');
+    var threeBtn = document.getElementById('threeBtn');
+    var plusBtn = document.getElementById('plusBtn');
+    var piBtn = document.getElementById('piBtn');
+    var zeroBtn = document.getElementById('zeroBtn');
+    var equalBtn = document.getElementById('equalBtn');
+    clearBtn.addEventListener('click', function () {
+        display.value = '';
+    });
+    deleteBtn.addEventListener('click', function () {
+        display.value = display.value.toString().slice(0, -1);
+    });
+    dotBtn.addEventListener('click', function () {
+        display.value += '.';
+    });
+    divideBtn.addEventListener('click', function () {
+        display.value += '/';
+    });
+    sevenBtn.addEventListener('click', function () {
+        display.value += '7';
+    });
+    eightBtn.addEventListener('click', function () {
+        display.value += '8';
+    });
+    nightBtn.addEventListener('click', function () {
+        display.value += '9';
+    });
+    multiplyBtn.addEventListener('click', function () {
+        display.value += '*';
+    });
+    fourBtn.addEventListener('click', function () {
+        display.value += '4';
+    });
+    fiveBtn.addEventListener('click', function () {
+        display.value += '5';
+    });
+    sixBtn.addEventListener('click', function () {
+        display.value += '6';
+    });
+    minusBtn.addEventListener('click', function () {
+        display.value += '-';
+    });
+    oneBtn.addEventListener('click', function () {
+        display.value += '1';
+    });
+    twoBtn.addEventListener('click', function () {
+        display.value += '2';
+    });
+    threeBtn.addEventListener('click', function () {
+        display.value += '3';
+    });
+    plusBtn.addEventListener('click', function () {
+        display.value += '+';
+    });
+    piBtn.addEventListener('click', function () {
+        display.value += '3.1415926';
+    });
+    zeroBtn.addEventListener('click', function () {
+        display.value += '0';
+    });
+
+    document.getElementById('equalBtn').addEventListener('click', function() {
+        display.value = new Function('return ' + display.value)();
+    });
+
+    //////////////////////////////
+    /////////////JS///////////////
+    //////////////////////////////
+})();
